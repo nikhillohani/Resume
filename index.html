@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Lohani - CV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile">
+                <div class="profile-image">
+                <img src="src/dp.jpg" alt="Nikhil Lohani">
+            </div>
+                <h1>Nikhil Lohani</h1>
+                <p class="title">Specialist, Creative Design - C2</p>
+            </div>
+            <div class="contact">
+                <p><i class="phone-icon"></i>+91 7209241257</p>
+                <p><i class="email-icon"></i>golulohani999@gmail.com</p>
+                <p><i class="location-icon"></i>Noida, India</p>
+                <a href="" target="_blank" class="cta-button">View Portfolio</a>
+                <a href="src/1_Nikhil Resume_update.pdf" target="_blank" class="cta-button cta-primary">Download CV</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="summary">
+                <h2>Professional Summary</h2>
+                <p>Creative and detail-oriented graphic designer with extensive experience in the advertising industry, specializing in crafting visually compelling designs for digital and print media. Proficient in Adobe Creative Suite (Photoshop, Illustrator, After Effects, Premiere Pro, Media Encoder, and Animate CC) with a strong foundation in branding, typography, color theory, and layout design. Skilled in developing high-impact visuals for marketing campaigns, social media, and ad creatives that align with brand identity and business objectives. Passionate about staying updated with design trends, UX principles, and emerging technologies to deliver innovative and engaging content.</p>
+            </section>
+
+            <section class="experience">
+                <h2>Work Experience</h2>
+                <div class="job">
+                    <h3>Specialist, Creative Design - C3</h3>
+                    <p class="company">VDX.tv</p>
+                    <p class="period">2020 - 2023 - Present</p>
+                    <ul>
+                        <li>Delivered high-quality creatives with brand consistency.</li>
+                        <li>Created video illusions and motion graphics for engagement.</li>
+                        <li>Handled advertising campaigns with visually compelling designs.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <h3>Specialist, Creative Design - C2</h3>
+                    <p class="company">VDX.tv</p>
+                    <p class="period">2024 - 2025 - Present</p>
+                    <ul>
+                        <li>Lead designer for major client projects</li>
+                        <li>Created brand identities and marketing materials</li>
+                        <li>Managed team of junior designers</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="skills">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill">Adobe Photoshop</div>
+                    <div class="skill">Adobe Illustrator</div>
+                    <div class="skill">Adobe Muse</div>
+                    <div class="skill">UI Designer</div>
+                    <div class="skill">Brand Identity</div>
+                    <div class="skill">Typography</div>
+                    <div class="skill">After Effect</div>
+                    <div class="skill">Adobe Premiere Pro</div>
+                    <div class="skill">Adobe Media Encoder</div>
+                    <div class="skill">Adobe Animate CC</div>
+                    <div class="skill">Basic HTML & CSS</div>
+                    <div class="skill">Photography</div>
+                </div>
+            </section>
+
+            <section class="education">
+                <h2>Education</h2>
+                <div class="degree">
+                    <h3>PCA EDU – Computer Education Institute</h3>
+                    <p class="school">Diploma in Multimedia (DMM), Graphic Design</p>
+                    <p class="period">2019 - 2020</p>
+                </div>
+            </section>
+
+            <section class="achievements">
+                <h2>Achievements & Awards</h2>
+                <div class="achievements-grid">
+                    <div class="achievement">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Best Designer 2024</h3>
+                        <p>Creative Best Designer Awards</p>
+                    </div>
+                    <div class="achievement">
+                        <i class="fas fa-award"></i>
+                        <h3>Gold Medal</h3>
+                        <p>VDX.TV VSL INDOOR Foosball</p>
+                    </div>
+                    <div class="achievement">
+                        <i class="fas fa-medal"></i>
+                        <h3>Silver Medal</h3>
+                        <p>VDX.TV VSL INDOOR Kho-Kho</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery">
+                <h2>Team & Events</h2>
+                <div class="gallery-container">
+                    <button class="gallery-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="gallery-track">
+                        <div class="gallery-slide">
+                            <img src="src/img1.jpg" alt="Team Meeting">
+                            <p>Team M&E</p>
+                        </div>
+                        <div class="gallery-slide">
+                             <img src="src/img2.jpg" alt="Annual Design">
+                            <p>Egypt Summit 2024</p>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="src/img3.jpg" alt="Workshop">
+                            <p>Egypt Summit 2024</p>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="src/img4.jpg" alt="Workshop">
+                            <p>Best Designer Award 2024</p>
+                        </div>
+                    </div>
+                    <button class="gallery-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const track = document.querySelector('.gallery-track');
+                    const slides = document.querySelectorAll('.gallery-slide');
+                    const prevBtn = document.querySelector('.prev');
+                    const nextBtn = document.querySelector('.next');
+                    let currentIndex = 0;
+        
+                    function updateSlides() {
+                        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    }
+        
+                    function nextSlide() {
+                        currentIndex = (currentIndex + 1) % slides.length;
+                        updateSlides();
+                    }
+        
+                    function prevSlide() {
+                        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                        updateSlides();
+                    }
+        
+                    prevBtn.addEventListener('click', prevSlide);
+                    nextBtn.addEventListener('click', nextSlide);
+        
+                    // Auto-play
+                    setInterval(nextSlide, 5000);
+                });
+            </script>
+            
+        </main>
+    </div>
+</body>
+</html>
